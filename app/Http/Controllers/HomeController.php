@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\JobCategories;
+use App\JobVacancies;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +24,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $JobCategories = JobCategories::paginate(3);
+        $JobVacancies = JobVacancies::paginate(3);
+        return view('home', compact('JobCategories'), compact('JobVacancies'));
     }
 }

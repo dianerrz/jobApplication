@@ -116,6 +116,10 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+    'jobCatName' => 'Job Category Name',
+    'jobCatCode' => 'Job Category Code',
+    'jobCatDesc' => 'Job Category Description',
+    ],
 
 ];

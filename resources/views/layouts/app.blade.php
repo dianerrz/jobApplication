@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>ABC CO.</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -28,8 +28,8 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+                    <a class="navbar-brand" href="{{ url('/home') }}">
+                        ABC CO.
                     </a>
                 </div>
 
@@ -88,15 +88,23 @@
                                 </ul>
                             </li>
                         @else
+                        <li><a href="{{ url('/jobCategories') }}">Job Categories</a></li>
+                        <li><a href="{{ url('/jobVacancy') }}">Job Vacancy</a></li>
+                        <li><a href="{{ url('/applicantInfo') }}">Applicant Information</a></li>
+                        <li><a href="{{ url('/administrator') }}">Administrator</a></li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                     ADMIN <span class="caret"></span>
                                 </a>
                                 <ul class="dropdown-menu" role="menu">
-                                    
-                                     <li>
-                                        <a href="{{ url('/addJobCategories') }}">
-                                            Add Job Categories
+                                    <li>
+                                        <a href="{{ url('/home') }}">
+                                            Home
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ url('/addAdministrator') }}">
+                                            Settings
                                         </a>
                                     </li>
                                     <li>
